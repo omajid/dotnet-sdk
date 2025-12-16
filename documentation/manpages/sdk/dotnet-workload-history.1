@@ -14,48 +14,48 @@
 . ftr VB CB
 . ftr VBI CBI
 .\}
-.TH "dotnet-workload-list" "1" "2025-12-15" "" ".NET Documentation"
+.TH "dotnet-workload-history" "1" "2025-12-15" "" ".NET Documentation"
 .hy
-.SH dotnet workload list
+.SH dotnet workload history
 .PP
 \f[B]This article applies to:\f[R] \[u2714]\[uFE0F] .NET 6 SDK and later versions
 .SH NAME
 .PP
-dotnet-workload-list - Lists installed workloads.
+dotnet-workload-history - Shows a history of workload installation actions.
 .SH SYNOPSIS
 .IP
 .nf
 \f[C]
-dotnet workload list [-v|--verbosity <LEVEL>]
+dotnet workload history [options]
 
-dotnet workload list [-?|-h|--help]
+dotnet workload history -?|-h|--help
 \f[R]
 .fi
 .SH DESCRIPTION
 .PP
-The \f[V]dotnet workload list\f[R] command lists all installed workloads.
+The \f[V]dotnet workload history\f[R] shows a history of workload installation actions.
 .PP
 For more information about the \f[V]dotnet workload\f[R] commands, see the dotnet workload install command.
 .SH OPTIONS
+.IP \[bu] 2
+\f[B]\[en]all\f[R]
+.RS 2
+.PP
+Removes and uninstalls all workload components from all SDK versions.
+Defaults to \f[V]false\f[R].
+.RE
 .PP
 \f[B]\f[VB]-?|-h|--help\f[B]\f[R]
 .PP
 Prints out a description of how to use the command.
-.PP
-\f[B]\f[VB]-v|--verbosity <LEVEL>\f[B]\f[R]
-.PP
-Sets the verbosity level of the command.
-Allowed values are \f[V]q[uiet]\f[R], \f[V]m[inimal]\f[R], \f[V]n[ormal]\f[R], \f[V]d[etailed]\f[R], and \f[V]diag[nostic]\f[R].
-The default is \f[V]minimal\f[R].
-For more information, see <xref:Microsoft.Build.Framework.LoggerVerbosity>.
 .SH EXAMPLES
 .IP \[bu] 2
-List the installed workloads:
+Remove all workflow components:
 .RS 2
 .IP
 .nf
 \f[C]
-dotnet workload list
+dotnet workload history --all
 \f[R]
 .fi
 .RE
